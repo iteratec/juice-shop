@@ -357,6 +357,16 @@ module.exports = function () {
     }).success(function (challenge) {
       challenges.premiumPaywallChallenge = challenge
     })
+
+    models.Challenge.create({
+      name: 'NoSql JavaScript Injection',
+      category: 'NoSQL Injections',
+      description: 'Let the server sleep for some time. It has done more then enough for you.',
+      difficulty: 2,
+      solved: false
+    }).success(function (challenge) {
+      challenges.noSqlJavaScriptChallenge = challenge
+    })
   }
 
   function createUsers () {
