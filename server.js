@@ -45,6 +45,9 @@ var app = express()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 
+var showProductReviews = require('./routes/showProductReviews')
+var createProductReviews = require('./routes/createProductReviews')
+
 global.io = io
 errorhandler.title = 'Juice Shop (Express ' + utils.version('express') + ')'
 
@@ -129,6 +132,11 @@ app.post('/api/Feedbacks', verify.forgedFeedbackChallenge())
 
 /* Verifying DB related challenges can be postponed until the next request for challenges is coming via sequelize-restful */
 app.use(verify.databaseRelatedChallenges())
+
+
+app.get('/rest/product/:id/reviews', showProductReviews())
+app.put('/rest/product/:id/reviews', createProductReviews())
+
 /* Sequelize Restful APIs */
 app.use(restful(models.sequelize, {
   endpoint: '/api',
@@ -153,6 +161,7 @@ app.post('/file-upload', upload.single('file'), fileUpload())
 /* File Serving */
 app.get('/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg', easterEgg())
 app.get('/this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us', premiumReward())
+
 app.use(angular())
 /* Error Handling */
 app.use(verify.errorHandlingChallenge())

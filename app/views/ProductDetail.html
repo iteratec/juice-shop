@@ -28,6 +28,30 @@
                 <p><img src="/public/images/products/{{product.image}}"/></p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+              <strong translate="LABEL_COMMENT"></strong>
+              <p ng-show="productReviews.length === 0">No Comments yet.</p>
+              <blockquote data-ng-repeat="review in productReviews">
+                  <p>{{ review.msg }}</p>
+
+                  <footer>{{ review.author }}</footer>
+              </blockquote>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="feedbackComment" translate="LABEL_COMMENT"></label>
+                    <textarea class="form-control input-sm" id="feedbackComment" ng-model="msg" name="feedbackComment" required ng-maxlength="160"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                  <button type="submit" ng-click="addComment()" id="submitButton" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="save()"><i class="fa fa-send fa-lg"></i> <span translate="BTN_SUBMIT"></span></button>
+              </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="modal-footer">
