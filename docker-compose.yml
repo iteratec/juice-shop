@@ -1,0 +1,20 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    networks:
+      - server
+    ports:
+      - "27017:27017"
+
+  juice-shop:
+    image: bkimminich/juice-shop
+    depends_on:
+      - mongodb
+    networks:
+      - server
+    ports:
+      - "3000:3000"
+
+networks:
+  server:
