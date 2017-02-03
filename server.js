@@ -45,6 +45,8 @@ var app = express()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 
+var MongoClient = require('mongodb').MongoClient
+
 var showProductReviews = require('./routes/showProductReviews')
 var createProductReviews = require('./routes/createProductReviews')
 
@@ -181,6 +183,16 @@ io.on('connection', function (socket) {
 })
 
 exports.start = function (config, readyCallback) {
+
+  app.locals.mongoAdress = 'mongodb://127.0.0.1:27017/test'
+
+  MongoClient.connect(app.locals.mongoAdress, function(err, db) {
+    app.locals.noSqlEnabled = (err === null)
+    if(db !== null){
+      db.close()
+    }
+  })
+
   if (!this.server) {
     models.sequelize.drop()
     models.sequelize.sync().success(function () {

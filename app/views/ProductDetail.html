@@ -28,7 +28,7 @@
                 <p><img src="/public/images/products/{{product.image}}"/></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" ng-hide="reviewsDisabled">
             <div class="col-md-12">
               <strong translate="LABEL_COMMENT"></strong>
               <p ng-show="productReviews.length === 0">No Comments yet.</p>
@@ -38,8 +38,6 @@
                   <footer>{{ review.author }}</footer>
               </blockquote>
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="feedbackComment" translate="LABEL_COMMENT"></label>

@@ -15,14 +15,25 @@ angular.module('juiceShop').controller('ProductDetailsController', [
       $http.get('/rest/product/' + id + '/reviews'),
       userService.whoAmI()
     ]).then(function (result) {
-      $scope.product = result[0].data.data
-      $scope.productReviews = result[1].data.data
+      var product = result[0].data.data
+      var reviews = result[1].data
+      var user = result[2].data
+
+      $scope.product = product
       $scope.product.description = $sce.trustAsHtml($scope.product.description)
 
-      if(result[2].data.email === undefined){
+
+      if(reviews.msg !== undefined && reviews.msg === 'No NoSQL Database availible'){
+        $scope.reviewsDisabled = true
+      }else{
+        $scope.reviewsDisabled = false
+        $scope.productReviews = reviews.data
+      }
+
+      if(user.email === undefined){
         $scope.author = 'Anonymous'
       }else{
-        $scope.author = result[2].data.email
+        $scope.author = user.email
       }
 
     }, function (err) {
