@@ -2,17 +2,17 @@ angular.module('juiceShop').controller('ProductDetailsController', [
   '$scope',
   '$sce',
   '$q',
-  '$http', //TODO In ProductReview Service auslagern
   '$uibModal',
   'ProductService',
+  'ProductReviewService',
   'UserService',
   'id',
-  function ($scope, $sce, $q, $http, $uibModal, productService, userService, id) {
+  function ($scope, $sce, $q, $uibModal, productService, productReviewService, userService, id) {
     'use strict'
 
     $q.all([
       productService.get(id),
-      $http.get('/rest/product/' + id + '/reviews'),
+      productReviewService.get(id),
       userService.whoAmI()
     ]).then(function (result) {
       var product = result[0].data.data
@@ -21,7 +21,6 @@ angular.module('juiceShop').controller('ProductDetailsController', [
 
       $scope.product = product
       $scope.product.description = $sce.trustAsHtml($scope.product.description)
-
 
       if(reviews.msg !== undefined && reviews.msg === 'No NoSQL Database availible'){
         $scope.reviewsDisabled = true
@@ -43,7 +42,7 @@ angular.module('juiceShop').controller('ProductDetailsController', [
     $scope.addComment = function(){
       var review = { msg: $scope.msg, author: $scope.author }
       $scope.productReviews.push(review)
-      $http.put('/rest/product/' + id + '/reviews', review)
+      productReviewService.create(id, review)
     }
 
   }])
