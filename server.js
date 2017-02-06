@@ -135,7 +135,6 @@ app.post('/api/Feedbacks', verify.forgedFeedbackChallenge())
 /* Verifying DB related challenges can be postponed until the next request for challenges is coming via sequelize-restful */
 app.use(verify.databaseRelatedChallenges())
 
-
 app.get('/rest/product/:id/reviews', showProductReviews())
 app.put('/rest/product/:id/reviews', createProductReviews())
 
@@ -183,12 +182,11 @@ io.on('connection', function (socket) {
 })
 
 exports.start = function (config, readyCallback) {
-
   app.locals.mongoAdress = 'mongodb://127.0.0.1:27017/test'
 
-  MongoClient.connect(app.locals.mongoAdress, function(err, db) {
+  MongoClient.connect(app.locals.mongoAdress, function (err, db) {
     app.locals.noSqlEnabled = (err === null)
-    if(db !== null){
+    if (db !== null) {
       db.close()
     }
   })

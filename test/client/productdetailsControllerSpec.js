@@ -24,6 +24,8 @@ describe('controllers', function () {
 
     it('should be defined', inject(function () {
       $httpBackend.whenGET(/\/api\/Products\/42/).respond(200, {data: {}})
+      $httpBackend.whenGET('/rest/product/42/reviews').respond(200, {data: {}})
+      $httpBackend.whenGET('/rest/user/whoami').respond(200, {data: {}})
 
       $httpBackend.flush()
 
@@ -32,6 +34,8 @@ describe('controllers', function () {
 
     it('should hold single product with given id', inject(function () {
       $httpBackend.whenGET(/\/api\/Products\/42/).respond(200, {data: {name: 'Test Juice'}})
+      $httpBackend.whenGET('/rest/product/42/reviews').respond(200, {data: {}})
+      $httpBackend.whenGET('/rest/user/whoami').respond(200, {data: {}})
 
       $httpBackend.flush()
 
@@ -41,6 +45,9 @@ describe('controllers', function () {
 
     it('should render product description as trusted HTML', inject(function () {
       $httpBackend.whenGET(/\/api\/Products\/42/).respond(200, {data: {description: '<script>alert("XSS3")</script>'}})
+      $httpBackend.whenGET('/rest/product/42/reviews').respond(200, {data: {}})
+      $httpBackend.whenGET('/rest/user/whoami').respond(200, {data: {}})
+
       spyOn($sce, 'trustAsHtml')
 
       $httpBackend.flush()
@@ -50,19 +57,24 @@ describe('controllers', function () {
 
     it('should hold no product if API call fails', inject(function () {
       $httpBackend.whenGET(/\/api\/Products\/42/).respond(500)
+      $httpBackend.whenGET('/rest/product/42/reviews').respond(500, {data: {}})
+      $httpBackend.whenGET('/rest/user/whoami').respond(500, {data: {}})
 
       $httpBackend.flush()
 
       expect(scope.product).toBeUndefined()
     }))
 
-    it('should log errors directly to browser console', inject(function () {
+    it('should log errors', inject(function () {
       $httpBackend.whenGET(/\/api\/Products\/42/).respond(500, 'error')
+      $httpBackend.whenGET('/rest/product/42/reviews').respond(500, 'error')
+      $httpBackend.whenGET('/rest/user/whoami').respond(500, 'error')
+
       console.log = jasmine.createSpy('log')
 
       $httpBackend.flush()
 
-      expect(console.log).toHaveBeenCalledWith('error')
+      expect(console.log).toHaveBeenCalled()
     }))
   })
 })

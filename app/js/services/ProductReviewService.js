@@ -4,7 +4,6 @@ angular.module('juiceShop').factory('ProductReviewService', ['$http', function (
   var host = '/rest/product'
 
   function get (id) {
-    console.log('I am a service')
     return $http.get(host + '/' + id + '/reviews')
   }
 

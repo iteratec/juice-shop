@@ -22,27 +22,27 @@ angular.module('juiceShop').controller('ProductDetailsController', [
       $scope.product = product
       $scope.product.description = $sce.trustAsHtml($scope.product.description)
 
-      if(reviews.msg !== undefined && reviews.msg === 'No NoSQL Database availible'){
+      if (reviews.msg !== undefined && reviews.msg === 'No NoSQL Database availible') {
         $scope.reviewsDisabled = true
-      }else{
+      } else {
         $scope.reviewsDisabled = false
         $scope.productReviews = reviews.data
       }
 
-      if(user.email === undefined){
+      if (user.email === undefined) {
         $scope.author = 'Anonymous'
-      }else{
+      } else {
         $scope.author = user.email
       }
-
-    }, function (err) {
+    },
+    function (err) {
       console.log(err)
-    })
+    }
+    )
 
-    $scope.addComment = function(){
+    $scope.addComment = function () {
       var review = { msg: $scope.msg, author: $scope.author }
       $scope.productReviews.push(review)
       productReviewService.create(id, review)
     }
-
   }])
