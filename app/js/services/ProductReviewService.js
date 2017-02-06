@@ -11,8 +11,13 @@ angular.module('juiceShop').factory('ProductReviewService', ['$http', function (
     return $http.put(host + '/' + id + '/reviews', review)
   }
 
+  function patch (review) {
+    return $http.patch(host + '/reviews', review)
+  }
+
   return {
     get: get,
-    create: create
+    create: create,
+    patch: patch
   }
 }])

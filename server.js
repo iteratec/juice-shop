@@ -45,10 +45,14 @@ var app = express()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 
+// Init the MongoDB Driver and the associatet Models
+require('./mongoose/index')
+
 var MongoClient = require('mongodb').MongoClient
 
 var showProductReviews = require('./routes/showProductReviews')
 var createProductReviews = require('./routes/createProductReviews')
+var updateProductReviews = require('./routes/updateProductReviews')
 
 global.io = io
 errorhandler.title = 'Juice Shop (Express ' + utils.version('express') + ')'
@@ -137,6 +141,7 @@ app.use(verify.databaseRelatedChallenges())
 
 app.get('/rest/product/:id/reviews', showProductReviews())
 app.put('/rest/product/:id/reviews', createProductReviews())
+app.patch('/rest/product/reviews', updateProductReviews())
 
 /* Sequelize Restful APIs */
 app.use(restful(models.sequelize, {

@@ -33,7 +33,9 @@
               <strong translate="LABEL_COMMENT"></strong>
               <p ng-show="productReviews.length === 0">No Comments yet.</p>
               <blockquote data-ng-repeat="review in productReviews">
-                  <p>{{ review.msg }}</p>
+                  <p>{{ review.message }}</p>
+
+                  <button ng-show="review.author !== 'Anonymous' && review.author === author" ng-click="editComment(review)" type="button" name="edit" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</button>
 
                   <footer>{{ review.author }}</footer>
               </blockquote>
@@ -41,7 +43,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="feedbackComment" translate="LABEL_COMMENT"></label>
-                    <textarea class="form-control input-sm" id="feedbackComment" ng-model="msg" name="feedbackComment" required ng-maxlength="160"></textarea>
+                    <textarea class="form-control input-sm" id="feedbackComment" ng-model="message" name="feedbackComment" required ng-maxlength="160"></textarea>
                 </div>
             </div>
             <div class="col-md-12">

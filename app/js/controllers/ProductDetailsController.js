@@ -41,8 +41,21 @@ angular.module('juiceShop').controller('ProductDetailsController', [
     )
 
     $scope.addComment = function () {
-      var review = { msg: $scope.msg, author: $scope.author }
+      var review = { message: $scope.message, author: $scope.author }
       $scope.productReviews.push(review)
       productReviewService.create(id, review)
+    }
+
+    $scope.editComment = function (comment) {
+      $uibModal.open({
+        templateUrl: 'views/ProductCommentEdit.html',
+        controller: 'ProductCommentEditController',
+        size: 'lg',
+        resolve: {
+          comment: function () {
+            return comment
+          }
+        }
+      })
     }
   }])

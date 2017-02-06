@@ -2,30 +2,20 @@
 
 var utils = require('../lib/utils')
 
-var MongoClient = require('mongodb').MongoClient
-
-// Mongo Connection URL
-var url = 'mongodb://127.0.0.1:27017/test'
+var Review = require('../mongoose/reviews').Review
 
 exports = module.exports = function productReviews () {
   return function (req, res, next) {
-    // Use connect method to connect to the server
-    MongoClient.connect(url, function (err, db) {
-      if (err !== null) {
-        res.json({error: 'Could not connect to MongoDB'})
-      }
+    var review = new Review()
 
-      // Merge the the msg and author into one object
-      var review = Object.assign(req.params, req.body)
+    review.product = req.params.id
+    review.message = req.body.message
+    review.author = req.body.author
 
-      db.collection('product-reviews').insert(review, function (err, result) {
-        if (err !== null) {
-          res.json({error: 'Could not connect to MongoDB'})
-        }
-        res.json(utils.queryResultToJson(result))
-      })
-
-      db.close()
+    review.save().then(function (result) {
+      res.json(utils.queryResultToJson(result))
+    }, function (err) {
+      res.json({error: 'Could not connect to MongoDB', trace: err})
     })
   }
 }
