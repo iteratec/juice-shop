@@ -15,11 +15,11 @@ angular.module('juiceShop').controller('ProductDetailsController', [
       productReviewService.get(id),
       userService.whoAmI()
     ]).then(function (result) {
-      var product = result[0].data.data
+      var product = result[0].data
       var reviews = result[1].data
       var user = result[2].data
 
-      $scope.product = product
+      $scope.product = product.data
       $scope.product.description = $sce.trustAsHtml($scope.product.description)
 
       if (reviews.msg !== undefined && reviews.msg === 'No NoSQL Database availible') {
@@ -46,16 +46,31 @@ angular.module('juiceShop').controller('ProductDetailsController', [
       productReviewService.create(id, review)
     }
 
+    $scope.refreshComments = function () {
+      productReviewService.get(id).then(function (result) {
+        $scope.productReviews = result.data.data;
+      })
+    }
+
     $scope.editComment = function (comment) {
       $uibModal.open({
         templateUrl: 'views/ProductCommentEdit.html',
         controller: 'ProductCommentEditController',
+        bindings: {
+          resolve: '<',
+          close: '&',
+          dismiss: '&'
+        },
         size: 'lg',
         resolve: {
           comment: function () {
             return comment
           }
         }
+      }).result.then(function (value) {
+        $scope.refreshComments()
+      }, function () {
+        console.log('Cancelled')
       })
     }
   }])
