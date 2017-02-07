@@ -139,6 +139,7 @@ app.post('/api/Feedbacks', verify.forgedFeedbackChallenge())
 /* Verifying DB related challenges can be postponed until the next request for challenges is coming via sequelize-restful */
 app.use(verify.databaseRelatedChallenges())
 
+// routes for the NoSql parts of the application 
 app.get('/rest/product/:id/reviews', showProductReviews())
 app.put('/rest/product/:id/reviews', createProductReviews())
 app.patch('/rest/product/reviews', updateProductReviews())

@@ -1,4 +1,4 @@
-//Mongoose Model for the Product Reviews
+// Mongoose Model for the Product Reviews
 var mongoose = require('mongoose')
 var autoIncrement = require('mongoose-auto-increment')
 
