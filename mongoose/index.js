@@ -7,7 +7,7 @@ var autoIncrement = require('mongoose-auto-increment')
 mongoose.Promise = global.Promise
 
 // TODO switch to docker network adress
-mongoose.connect('mongodb://mongodb:27017/test')
+mongoose.connect('mongodb://localhost:27017/test')
 
 var db = mongoose.connection
 // using a autoincrement plugin to enable attacks using $gt, $ne ...

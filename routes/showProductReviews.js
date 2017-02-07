@@ -20,8 +20,8 @@ exports = module.exports = function productReviews () {
 
         // If the DB Query takes longer then 2Sec, we can assume that some sort of dos attack was involved
         if ((new Date().getTime() - t0) > 2000) {
-          if (utils.notSolved(challenges.noSqlJavaScriptChallenge)) {
-            utils.solve(challenges.noSqlJavaScriptChallenge)
+          if (utils.notSolved(challenges.noSqlCommandChallenge)) {
+            utils.solve(challenges.noSqlCommandChallenge)
           }
         }
         res.json(utils.queryResultToJson(reviews))

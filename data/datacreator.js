@@ -359,13 +359,23 @@ module.exports = function () {
     })
 
     models.Challenge.create({
-      name: 'NoSql JavaScript Injection',
+      name: 'NoSql Command Injection',
       category: 'NoSQL Injections',
       description: 'Let the server sleep for some time. It has done more then enough for you.',
       difficulty: 2,
       solved: false
     }).success(function (challenge) {
-      challenges.noSqlJavaScriptChallenge = challenge
+      challenges.noSqlCommandChallenge = challenge
+    })
+
+    models.Challenge.create({
+      name: 'NoSql Injection',
+      category: 'NoSQL Injections',
+      description: 'Change more than one comment for a product at a time.',
+      difficulty: 2,
+      solved: false
+    }).success(function (challenge) {
+      challenges.noSqlInjectionChallenge = challenge
     })
   }
 
