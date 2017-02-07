@@ -48,8 +48,6 @@ var io = require('socket.io')(server)
 // Init the MongoDB Driver and the associatet Models
 require('./mongoose/index')
 
-var MongoClient = require('mongodb').MongoClient
-
 var showProductReviews = require('./routes/showProductReviews')
 var createProductReviews = require('./routes/createProductReviews')
 var updateProductReviews = require('./routes/updateProductReviews')
@@ -139,7 +137,7 @@ app.post('/api/Feedbacks', verify.forgedFeedbackChallenge())
 /* Verifying DB related challenges can be postponed until the next request for challenges is coming via sequelize-restful */
 app.use(verify.databaseRelatedChallenges())
 
-// routes for the NoSql parts of the application 
+// routes for the NoSql parts of the application
 app.get('/rest/product/:id/reviews', showProductReviews())
 app.put('/rest/product/:id/reviews', createProductReviews())
 app.patch('/rest/product/reviews', updateProductReviews())
@@ -188,15 +186,6 @@ io.on('connection', function (socket) {
 })
 
 exports.start = function (config, readyCallback) {
-  app.locals.mongoAdress = 'mongodb://127.0.0.1:27017/test'
-
-  MongoClient.connect(app.locals.mongoAdress, function (err, db) {
-    app.locals.noSqlEnabled = (err === null)
-    if (db !== null) {
-      db.close()
-    }
-  })
-
   if (!this.server) {
     models.sequelize.drop()
     models.sequelize.sync().success(function () {

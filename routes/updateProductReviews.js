@@ -2,6 +2,7 @@
 
 var insecurity = require('../lib/insecurity')
 
+var connection = require('mongoose').connection
 var Review = require('../mongoose/reviews').Review
 
 exports = module.exports = function productReviews () {
@@ -14,7 +15,7 @@ exports = module.exports = function productReviews () {
       return
     }
 
-    if (req.app.locals.noSqlEnabled) {
+    if (connection.readyState === 1) {
       // Check weather the user is allowed to update the reviews
       Review.find({_id: id}).then(function (reviews) {
         if (reviews.length === 0) {

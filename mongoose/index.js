@@ -4,7 +4,7 @@ var autoIncrement = require('mongoose-auto-increment')
 
 // telling mongoose to use native promises
 // TODO check compatability with older node Versions
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 
 // TODO switch to docker network adress
 mongoose.connect('mongodb://localhost:27017/test')
@@ -13,8 +13,23 @@ var db = mongoose.connection
 // using a autoincrement plugin to enable attacks using $gt, $ne ...
 autoIncrement.initialize(db)
 
-var Review = require('./reviews').Review
+db.on('open', function () {
+  console.log('+-----------------------------------------------------+')
+  console.log('|                      Success                        |')
+  console.log('|      A MongoDB Server was found in the network      |')
+  console.log('|      JuiceShop will automatically run with the      |')
+  console.log('|              NoSQL Extension enabled                |')
+  console.log('+-----------------------------------------------------+')
+})
 
-db.on('error', console.error.bind(console, 'connection error:'))
+db.on('error', function () {
+  console.log('+-----------------------------------------------------+')
+  console.log('|                     Warning                         |')
+  console.log('|      No MongoDB Server was found in the network     |')
+  console.log('|          This is just an optional feature           |')
+  console.log('|  The rest of the JuiceShop will work as exprected   |')
+  console.log('+-----------------------------------------------------+')
+})
+
 // writing initial data to the collection
 db.once('open', require('./datacreator'))

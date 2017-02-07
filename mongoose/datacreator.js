@@ -5,11 +5,11 @@ module.exports = function datacreator () {
     console.log('Emptied the review collection (NoSql Database)')
   }, function () {
     console.log('Error while trying to empty the review collection (NoSql Database)')
-  });
+  })
 
   // resetting the counter which is detemening the models id on each startup
   Review.resetCount(function (err, count) {
-    if (err){
+    if (err) {
       console.log(err)
     } else {
       console.log('Reseted the counter for the review collection')
