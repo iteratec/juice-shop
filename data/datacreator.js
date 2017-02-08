@@ -377,6 +377,18 @@ module.exports = function () {
     }).success(function (challenge) {
       challenges.noSqlInjectionChallenge = challenge
     })
+
+    models.Challenge.create({
+      name: 'NoSql Injection Direct Access',
+      category: 'NoSQL Injections',
+      description: 'Write any Message in the Secrets Collection of the MongoDB',
+      difficulty: 2,
+      solved: false
+    }).success(function (challenge) {
+      challenges.noSqlDirectAccess = challenge
+    })
+
+
   }
 
   function createUsers () {

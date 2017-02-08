@@ -5,7 +5,7 @@ services:
     networks:
       - server
     ports:
-      - "27017:27017"
+      - "1337:27017"
 
   juice-shop:
     build: ./

@@ -52,6 +52,10 @@ var showProductReviews = require('./routes/showProductReviews')
 var createProductReviews = require('./routes/createProductReviews')
 var updateProductReviews = require('./routes/updateProductReviews')
 
+var checkForDirectMongoAccess = require('./mongoose/directAccessCheck')
+
+app.use(checkForDirectMongoAccess)
+
 global.io = io
 errorhandler.title = 'Juice Shop (Express ' + utils.version('express') + ')'
 
