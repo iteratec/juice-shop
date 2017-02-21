@@ -75,8 +75,8 @@ angular.module('juiceShop').factory('socket', ['socketFactory', function (socket
   return socketFactory()
 }])
 
-angular.module('juiceShop').filter('emailName', function() {
-  return function(email) {
+angular.module('juiceShop').filter('emailName', function () {
+  return function (email) {
     // Split on @ only keep the part in front of it
     // then splitt on point and join it with a ' '
     return email.split('@')[0].split('.').join(' ')

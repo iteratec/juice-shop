@@ -5,19 +5,19 @@ var utils = require('../lib/utils')
 var challenges = require('../data/datacache').challenges
 
 module.exports = function (req, res, next) {
-
   if (connection.readyState === 1) {
     Secret.find({}).then(function (result) {
-      if(result.length > 1){
+      if (result.length > 1) {
         if (utils.notSolved(challenges.noSqlDirectAccess)) {
           utils.solve(challenges.noSqlDirectAccess)
         }
       }
     }, function (err) {
-      console.log('Could not reach MongoDB to check for direct access...')
+      if (err) {
+        console.log('Could not reach MongoDB to check for direct access...')
+      }
     })
   }
-
 
   next()
 }

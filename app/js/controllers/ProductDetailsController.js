@@ -48,7 +48,7 @@ angular.module('juiceShop').controller('ProductDetailsController', [
 
     $scope.refreshComments = function () {
       productReviewService.get(id).then(function (result) {
-        $scope.productReviews = result.data.data;
+        $scope.productReviews = result.data.data
       })
     }
 

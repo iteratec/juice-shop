@@ -387,8 +387,6 @@ module.exports = function () {
     }).success(function (challenge) {
       challenges.noSqlDirectAccess = challenge
     })
-
-
   }
 
   function createUsers () {
