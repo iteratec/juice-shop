@@ -27,7 +27,6 @@ frisby.create('GET product reviews attack by injecting a mongoDB sleep command')
     message: String,
     author: String
   })
-  .inspectRequest()
   .toss()
 
 frisby.create('PUT single product review can be created')
@@ -55,7 +54,6 @@ frisby.create('PATCH single product review can be edited')
     id: 1,
     message: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'
   }, { json: true })
-  .inspectRequest()
   .expectStatus(200)
   .expectHeaderContains('content-type', 'application/json')
   .expectJSONTypes({
@@ -73,7 +71,6 @@ frisby.create('PATCH single product review editing need an authenticated user')
     id: 1,
     message: 'Lorem Ipsum Lorem Ipsum Lorem'
   }, { json: true })
-  .inspectRequest()
   .expectStatus(401)
   .expectHeaderContains('content-type', 'application/json')
 
@@ -85,7 +82,6 @@ frisby.create('PATCH multiple product review via injection')
     },
     message: 'trololololololololololololololololololololololololololol'
   }, { json: true })
-  .inspectRequest()
   .expectStatus(200)
   .expectHeaderContains('content-type', 'application/json')
   .expectJSONTypes({
@@ -97,6 +93,3 @@ frisby.create('PATCH multiple product review via injection')
     nModified: 7,
     ok: 1})
   .toss()
-
-  // .expectJSONLength('data', 0)
-  // .addHeaders(authHeader)
