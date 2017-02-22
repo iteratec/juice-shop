@@ -6,7 +6,7 @@ var autoIncrement = require('mongoose-auto-increment')
 // TODO check compatability with older node Versions
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect('mongodb://mongodb:27017/test')
 
 var db = mongoose.connection
 // using a autoincrement plugin to enable attacks using $gt, $ne ...
