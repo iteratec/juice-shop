@@ -1,12 +1,33 @@
-// inits the Mongoose DB Connection
 var mongoose = require('mongoose')
 var autoIncrement = require('mongoose-auto-increment')
+
+var path = require('path')
+var mongod = require('mongodb-prebuilt')
+
+var dbPath = path.join(__dirname, 'data')
+
+mongod.start_server({
+  args: {
+    storageEngine: 'ephemeralForTest',
+    bind_ip: '127.0.0.1',
+    port: 27017,
+    dbpath: dbPath
+  },
+  auto_shutdown: true
+},
+  function (err) {
+    if (err) {
+      console.log('mongod didnt start:', err)
+    } else {
+      console.log('mongod is started')
+    }
+  })
 
 // telling mongoose to use native promises
 // TODO check compatability with older node Versions
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://mongodb:27017/test')
+mongoose.connect('mongodb://localhost:27017/test')
 
 var db = mongoose.connection
 // using a autoincrement plugin to enable attacks using $gt, $ne ...

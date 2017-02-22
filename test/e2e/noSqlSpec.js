@@ -1,24 +1,24 @@
 'use strict'
 
 var mongoose = require('mongoose')
-var Secret = require('../../mongoose/secrets').Secret;
+var Secret = require('../../mongoose/secrets').Secret
 
 describe('/#/search', function () {
   beforeEach(function () {
     browser.get('/#/search')
   })
 
-  beforeAll(function ( done ) {
+  beforeAll(function (done) {
     mongoose.Promise = global.Promise
 
     mongoose.connect('mongodb://localhost:27017/test')
     var db = mongoose.connection
     db.once('open', function () {
-        new Secret({ message: 'All your base are belong to us!' }).save().then(done, function () {
-          console.log('Could not write into Secret collection test is going to fail')
-          done()
-        })
-      }
+      new Secret({ message: 'All your base are belong to us!' }).save().then(done, function () {
+        console.log('Could not write into Secret collection test is going to fail')
+        done()
+      })
+    }
     )
   })
 
