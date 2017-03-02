@@ -36,6 +36,7 @@ var coupon = require('./routes/coupon')
 var basket = require('./routes/basket')
 var order = require('./routes/order')
 var verify = require('./routes/verify')
+var ctfLevels = require('./routes/ctfLevels')
 var utils = require('./lib/utils')
 var insecurity = require('./lib/insecurity')
 var models = require('./models')
@@ -52,8 +53,8 @@ var showProductReviews = require('./routes/showProductReviews')
 var createProductReviews = require('./routes/createProductReviews')
 var updateProductReviews = require('./routes/updateProductReviews')
 
+// Check on each request wheather there was a direct accsess to the mongodb
 var checkForDirectMongoAccess = require('./mongoose/directAccessCheck')
-
 app.use(checkForDirectMongoAccess)
 
 global.io = io
@@ -170,6 +171,8 @@ app.post('/file-upload', upload.single('file'), fileUpload())
 /* File Serving */
 app.get('/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg', easterEgg())
 app.get('/this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us', premiumReward())
+
+app.get('/exports/ctf/levels', ctfLevels())
 
 app.use(angular())
 /* Error Handling */
