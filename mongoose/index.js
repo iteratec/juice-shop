@@ -6,7 +6,7 @@ var mongod = require('mongodb-prebuilt')
 
 var dbPath = path.join(__dirname, 'data')
 
-var mongoUrl = 'mongodb://localhost:27017/test'
+var mongoUrl = 'mongodb://localhost:1337/test'
 var retriesLeft = 5
 
 var connectWithRetry = function () {
@@ -23,7 +23,7 @@ mongod.start_server({
   args: {
     storageEngine: 'ephemeralForTest',
     bind_ip: '127.0.0.1',
-    port: 27017,
+    port: 1337,
     dbpath: dbPath
   },
   auto_shutdown: true

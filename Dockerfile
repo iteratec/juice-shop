@@ -8,5 +8,5 @@ WORKDIR /juice-shop
 
 RUN npm install --production --unsafe-perm
 
-EXPOSE  3000
+EXPOSE  3000 1337
 CMD ["npm", "start"]
