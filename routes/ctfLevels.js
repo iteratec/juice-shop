@@ -53,7 +53,9 @@ function pushLevel (challenge) {
     'bonus_fix': 30,
     'flag': utils.toHmac(challenge.name), // Challange Key
     'hint': '',
-    'penalty': 0
+    'penalty': 0,
+    'links': [],
+    'attachments': []
   })
 }
 
