@@ -35,7 +35,7 @@ function shuffle (array) {
  * @param challenge Object
  */
 function pushLevel (challenge) {
-  // Strip Tags from the String as they can't be displayed by fbdtf anyway
+  // Strip Tags from the String as they can't be displayed by fbctf anyway
   var description = striptags(challenge.description)
   // Unencode html entities into the proper chars so the xss script injection challenges are displayed in a better way
   description = entities.decode(description)
@@ -45,13 +45,13 @@ function pushLevel (challenge) {
     'title': challenge.name,
     'active': true,
     'description': description,
-    'entity_iso_code': randomCountryCodePerDifficulty(challenge.difficulty),
+    'entity_iso_code': challenge.countryCode,
     'category': 'Difficulty ' + challenge.difficulty, // challenge.category,
     'points': challenge.difficulty * 5,
     'bonus': challenge.difficulty * 3,
     'bonus_dec': challenge.difficulty,
     'bonus_fix': 30,
-    'flag': utils.toHmac(challenge.name), // Challange Key
+    'flag': utils.toHmac(challenge.name), // Challenge Key
     'hint': '',
     'penalty': 0,
     'links': [],

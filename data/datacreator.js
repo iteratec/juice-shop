@@ -20,6 +20,8 @@ module.exports = function () {
       category: 'Information Leakage',
       description: 'Find the carefully hidden \'Score Board\' page.',
       difficulty: 1,
+      country: 'Canada',
+      countryCode: 'CA',
       solved: false
     }).success(function (challenge) {
       challenges.scoreBoardChallenge = challenge
@@ -29,6 +31,8 @@ module.exports = function () {
       category: 'Information Leakage',
       description: 'Provoke an error that is not very gracefully handled.',
       difficulty: 1,
+      country: 'Austria',
+      countryCode: 'AT',
       solved: false
     }).success(function (challenge) {
       challenges.errorHandlingChallenge = challenge
@@ -38,6 +42,8 @@ module.exports = function () {
       category: 'SQL Injection',
       description: 'Log in with the administrator\'s user account.',
       difficulty: 2,
+      country: 'Russian Federation',
+      countryCode: 'RU',
       solved: false
     }).success(function (challenge) {
       challenges.loginAdminChallenge = challenge
@@ -47,6 +53,8 @@ module.exports = function () {
       category: 'SQL Injection',
       description: 'Log in with Jim\'s user account.',
       difficulty: 3,
+      country: 'Honduras',
+      countryCode: 'HN',
       solved: false
     }).success(function (challenge) {
       challenges.loginJimChallenge = challenge
@@ -56,6 +64,8 @@ module.exports = function () {
       category: 'SQL Injection',
       description: 'Log in with Bender\'s user account.',
       difficulty: 3,
+      country: 'Guatemala',
+      countryCode: 'GT',
       solved: false
     }).success(function (challenge) {
       challenges.loginBenderChallenge = challenge
@@ -65,6 +75,8 @@ module.exports = function () {
       category: 'XSS',
       description: 'XSS Tier 1: Perform a <i>reflected</i> XSS attack with <code>&lt;script&gt;alert("XSS1")&lt;/script&gt;</code>.',
       difficulty: 1,
+      country: 'Germany',
+      countryCode: 'DE',
       solved: false
     }).success(function (challenge) {
       challenges.localXssChallenge = challenge
@@ -74,6 +86,8 @@ module.exports = function () {
       category: 'XSS',
       description: 'XSS Tier 2: Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS2")&lt;/script&gt;</code> bypassing a <i>client-side</i> security mechanism.',
       difficulty: 3,
+      country: 'Uruguay',
+      countryCode: 'UY',
       solved: false
     }).success(function (challenge) {
       challenges.persistedXssChallengeUser = challenge
@@ -83,6 +97,8 @@ module.exports = function () {
       category: 'XSS',
       description: 'XSS Tier 4: Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS4")&lt;/script&gt;</code> bypassing a <i>server-side</i> security mechanism.',
       difficulty: 4,
+      country: 'Myanmar',
+      countryCode: 'MM',
       solved: false
     }).success(function (challenge) {
       challenges.persistedXssChallengeFeedback = challenge
@@ -92,6 +108,8 @@ module.exports = function () {
       category: 'XSS',
       description: 'XSS Tier 3: Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS3")&lt;/script&gt;</code> without using the frontend application at all.',
       difficulty: 3,
+      country: 'Costa Rica',
+      countryCode: 'CR',
       solved: false
     }).success(function (challenge) {
       challenges.restfulXssChallenge = challenge
@@ -101,6 +119,8 @@ module.exports = function () {
       category: 'SQL Injection',
       description: 'Retrieve a list of all user credentials via SQL Injection',
       difficulty: 3,
+      country: 'Paraguay',
+      countryCode: 'PY',
       solved: false
     }).success(function (challenge) {
       challenges.unionSqlInjectionChallenge = challenge
@@ -110,6 +130,8 @@ module.exports = function () {
       category: 'Weak Security Mechanisms',
       description: 'Log in with the administrator\'s user credentials without previously changing them or applying SQL Injection.',
       difficulty: 2,
+      country: 'Slovakia',
+      countryCode: 'SK',
       solved: false
     }).success(function (challenge) {
       challenges.weakPasswordChallenge = challenge
@@ -119,6 +141,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Get rid of all 5-star customer feedback.',
       difficulty: 1,
+      country: 'Bermuda',
+      countryCode: 'BM',
       solved: false
     }).success(function (challenge) {
       challenges.feedbackChallenge = challenge
@@ -128,6 +152,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Post some feedback in another users name.',
       difficulty: 3,
+      country: 'Belize',
+      countryCode: 'BZ',
       solved: false
     }).success(function (challenge) {
       challenges.forgedFeedbackChallenge = challenge
@@ -137,6 +163,8 @@ module.exports = function () {
       category: 'Weak Security Mechanisms',
       description: 'Wherever you go, there you are.',
       difficulty: 4,
+      country: 'Korea',
+      countryCode: 'KR',
       solved: false
     }).success(function (challenge) {
       challenges.redirectChallenge = challenge
@@ -146,6 +174,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Access someone else\'s basket.',
       difficulty: 2,
+      country: 'Belarus',
+      countryCode: 'BY',
       solved: false
     }).success(function (challenge) {
       challenges.basketChallenge = challenge
@@ -155,6 +185,8 @@ module.exports = function () {
       category: 'Validation Flaws',
       description: 'Place an order that makes you rich.',
       difficulty: 3,
+      country: 'Bolivia',
+      countryCode: 'BO',
       solved: false
     }).success(function (challenge) {
       challenges.negativeOrderChallenge = challenge
@@ -164,6 +196,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Access a confidential document.',
       difficulty: 1,
+      country: 'Switzerland',
+      countryCode: 'CH',
       solved: false
     }).success(function (challenge) {
       challenges.directoryListingChallenge = challenge
@@ -173,6 +207,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Access a developer\'s forgotten backup file.',
       difficulty: 3,
+      country: 'Peru',
+      countryCode: 'PE',
       solved: false
     }).success(function (challenge) {
       challenges.forgottenDevBackupChallenge = challenge
@@ -182,6 +218,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Access a salesman\'s forgotten backup file.',
       difficulty: 2,
+      country: 'Ukraine',
+      countryCode: 'UA',
       solved: false
     }).success(function (challenge) {
       challenges.forgottenBackupChallenge = challenge
@@ -191,6 +229,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Access the administration section of the store.',
       difficulty: 1,
+      country: 'United States of America',
+      countryCode: 'US',
       solved: false
     }).success(function (challenge) {
       challenges.adminSectionChallenge = challenge
@@ -200,6 +240,8 @@ module.exports = function () {
       category: 'CSRF',
       description: 'Change Bender\'s password into <i>slurmCl4ssic</i> without using SQL Injection.',
       difficulty: 4,
+      country: 'Turkey',
+      countryCode: 'TR',
       solved: false
     }).success(function (challenge) {
       challenges.csrfChallenge = challenge
@@ -209,6 +251,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Change the <code>href</code> of the link within the <a href="/#/search?q=O-Saft">O-Saft product</a> description into <i>http://kimminich.de</i>.',
       difficulty: 3,
+      country: 'Suriname',
+      countryCode: 'SR',
       solved: false
     }).success(function (challenge) {
       challenges.changeProductChallenge = challenge
@@ -218,6 +262,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: '<a href="/#/contact">Inform the shop</a> about a vulnerable library it is using. (Mention the exact library name and version in your comment.)',
       difficulty: 3,
+      country: 'Colombia',
+      countryCode: 'CO',
       solved: false
     }).success(function (challenge) {
       challenges.knownVulnerableComponentChallenge = challenge
@@ -227,6 +273,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: '<a href="/#/contact">Inform the shop</a> about an algorithm or library it should definitely not use the way it does.',
       difficulty: 2,
+      country: 'Poland',
+      countryCode: 'PL',
       solved: false
     }).success(function (challenge) {
       challenges.weirdCryptoChallenge = challenge
@@ -236,6 +284,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Find the hidden <a href="http://en.wikipedia.org/wiki/Easter_egg_(media)" target="_blank">easter egg</a>.',
       difficulty: 3,
+      country: 'Ecuador',
+      countryCode: 'EC',
       solved: false
     }).success(function (challenge) {
       challenges.easterEggLevelOneChallenge = challenge
@@ -245,6 +295,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: 'Apply some advanced cryptanalysis to find <i>the real</i> easter egg.',
       difficulty: 4,
+      country: 'Sri Lanka',
+      countryCode: 'LK',
       solved: false
     }).success(function (challenge) {
       challenges.easterEggLevelTwoChallenge = challenge
@@ -254,6 +306,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: 'Forge a coupon code that gives you a discount of at least 80%.',
       difficulty: 5,
+      country: 'Eritrea',
+      countryCode: 'ER',
       solved: false
     }).success(function (challenge) {
       challenges.forgedCouponChallenge = challenge
@@ -263,6 +317,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Travel back in time to the golden era of <img src="/css/geo-bootstrap/img/hot.gif"> web design.',
       difficulty: 3,
+      country: 'Panama',
+      countryCode: 'PA',
       solved: false
     }).success(function (challenge) {
       challenges.geocitiesThemeChallenge = challenge
@@ -272,6 +328,8 @@ module.exports = function () {
       category: 'SQL Injection',
       description: 'Order the Christmas special offer of 2014.',
       difficulty: 2,
+      country: 'Hungary',
+      countryCode: 'HU',
       solved: false
     }).success(function (challenge) {
       challenges.christmasSpecialChallenge = challenge
@@ -281,6 +339,8 @@ module.exports = function () {
       category: 'Validation Flaws',
       description: 'Upload a file larger than 100 kB.',
       difficulty: 3,
+      country: 'Falkland Islands (Malvinas)',
+      countryCode: 'FK',
       solved: false
     }).success(function (challenge) {
       challenges.uploadSizeChallenge = challenge
@@ -290,6 +350,8 @@ module.exports = function () {
       category: 'Validation Flaws',
       description: 'Upload a file that has no .pdf extension.',
       difficulty: 3,
+      country: 'French Guiana',
+      countryCode: 'GF',
       solved: false
     }).success(function (challenge) {
       challenges.uploadTypeChallenge = challenge
@@ -299,6 +361,8 @@ module.exports = function () {
       category: 'Forgotten Content',
       description: 'Retrieve the language file that never made it into production.',
       difficulty: 4,
+      country: 'Saudi Arabia',
+      countryCode: 'SA',
       solved: false
     }).success(function (challenge) {
       challenges.extraLanguageChallenge = challenge
@@ -308,6 +372,8 @@ module.exports = function () {
       category: 'Validation Flaws',
       description: 'Give a devastating zero-star feedback to the store.',
       difficulty: 1,
+      country: 'Australia',
+      countryCode: 'AU',
       solved: false
     }).success(function (challenge) {
       challenges.zeroStarsChallenge = challenge
@@ -317,6 +383,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: 'Solve challenge #99. Unfortunately, this challenge does not exist.',
       difficulty: 5,
+      country: 'Côte d\'Ivoire',
+      countryCode: 'CI',
       solved: false
     }).success(function (challenge) {
       challenges.continueCodeChallenge = challenge
@@ -326,6 +394,8 @@ module.exports = function () {
       category: 'Weak Security Mechanisms',
       description: 'Log in with Bjoern\'s user account <i>without</i> previously changing his password, applying SQL Injection, or hacking his Google account.',
       difficulty: 3,
+      country: 'Argentina',
+      countryCode: 'AR',
       solved: false
     }).success(function (challenge) {
       challenges.oauthUserPasswordChallenge = challenge
@@ -335,6 +405,8 @@ module.exports = function () {
       category: 'Weak Security Mechanisms',
       description: 'Exploit OAuth 2.0 to log in with the Chief Information Security Officer\'s user account.',
       difficulty: 4,
+      country: 'Malaysia',
+      countryCode: 'MY',
       solved: false
     }).success(function (challenge) {
       challenges.loginCisoChallenge = challenge
@@ -344,6 +416,8 @@ module.exports = function () {
       category: 'Weak Security Mechanisms',
       description: 'Log in with the support team\'s original user credentials without applying SQL Injection or any other bypass.',
       difficulty: 5,
+      country: 'South Sudan',
+      countryCode: 'SS',
       solved: false
     }).success(function (challenge) {
       challenges.loginSupportChallenge = challenge
@@ -353,6 +427,8 @@ module.exports = function () {
       category: 'Cryptographic Issues',
       description: '<i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><!--R9U8AvGlBbjhHXHW422jxVL2hoLBr8wflIAQ8d/jlERpKnrNlMErs1JfgT9EK/kzTtdb1GPhuWAz3i2HhomhaFMxvg4na+tvTi+8DoQoeqZH1KADoM2NJ7UOKc14b54cdRTXiYV7yFUzbPjjPVOWZFSmDcG6z+jQIPZtJuJ/tQc=--> <a href="/redirect?to=https://blockchain.info/address/1AbKfgvw9psQ41NbLi8kufDQTezwG8DRZm" target="_blank" class="btn btn-danger btn-xs"><i class="fa fa-btc fa-sm"></i> Unlock Premium Challenge</a> to access exclusive content.',
       difficulty: 5,
+      country: 'Angola',
+      countryCode: 'AO',
       solved: false
     }).success(function (challenge) {
       challenges.premiumPaywallChallenge = challenge
@@ -363,6 +439,8 @@ module.exports = function () {
       category: 'NoSQL Injections',
       description: 'Let the server sleep for some time. It has done more then enough for you.',
       difficulty: 2,
+      country: 'Moldova',
+      countryCode: 'MD',
       solved: false
     }).success(function (challenge) {
       challenges.noSqlCommandChallenge = challenge
@@ -373,6 +451,8 @@ module.exports = function () {
       category: 'NoSQL Injections',
       description: 'Change more than one comment for a product at a time.',
       difficulty: 2,
+      country: 'Czech Republic',
+      countryCode: 'CZ',
       solved: false
     }).success(function (challenge) {
       challenges.noSqlInjectionChallenge = challenge
@@ -383,6 +463,8 @@ module.exports = function () {
       category: 'NoSQL Injections',
       description: 'Write any Message in the Secrets Collection of the MongoDB',
       difficulty: 4,
+      country: 'Georgia',
+      countryCode: 'GE',
       solved: false
     }).success(function (challenge) {
       challenges.noSqlDirectAccess = challenge
