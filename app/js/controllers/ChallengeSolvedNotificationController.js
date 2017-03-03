@@ -14,9 +14,9 @@ angular.module('juiceShop').controller('ChallengeSolvedNotificationController', 
     socket.on('challenge solved', function (data) {
       if (data && data.challenge) {
         $translate('CHALLENGE_SOLVED', { challenge: data.challenge }).then(function (challengeSolved) {
-          $scope.notifications.push({message: challengeSolved, flag: data.flag})
+          $scope.notifications.push({message: challengeSolved, flag: data.flag, country: data.country})
         }, function (translationId) {
-          $scope.notifications.push({message: translationId, flag: data.flag})
+          $scope.notifications.push({message: translationId, flag: data.flag, country: data.country})
         })
         socket.emit('notification received', data.flag)
       }
