@@ -80,6 +80,7 @@ Feel free to have a look at the latest version of OWASP Juice Shop:
 > DDoS attacks you are free to use any tools or scripts to hack your
 > Juice Shop instance on Heroku!
 
+
 ### From Sources
 
 1. Install [node.js](#nodejs-version-compatibility)
@@ -184,9 +185,9 @@ distributions accordingly:
   [Error 128](https://github.com/bower/bower/issues/50) from some GitHub
   repos during `bower install` execution, run `git config --global
   url."https://".insteadOf git://` and try `npm install` again
-- If using Boot2Docker (Docker inside VirtualBox on Windows) make sure
-  that you also enable port forwarding from Host `127.0.0.1:3000` to
-  `0.0.0.0:3000` for TCP
+- If using Docker Toolbox on Windows make sure that you also enable port
+  forwarding from Host `127.0.0.1:3000` to `0.0.0.0:3000` for TCP for
+  the `default` VM in VirtualBox
 - If `npm install` fails after an update of your local copy during
   `bower install` complaining about version issues, delete
   `/app/bower_components` and try again to remove outdated versions that
@@ -197,6 +198,8 @@ distributions accordingly:
   [`node-gyp` installation instructions](https://github.com/nodejs/node-gyp#installation)
   for additional tools you might need to install (e.g. Python 2.7, GCC,
   Visual C++ Build Tools etc.)
+- If `npm install` fails on Ubuntu (e.g. while installing PhantomJS) you
+  might have to install a recent version of Node.js and try again.
 - Using the Vagrant script (on Windows) might not work while your virus
   scanner is running. This problem was experienced at least with
   F-Secure Internet Security.
@@ -204,6 +207,19 @@ distributions accordingly:
   I strongly recommend
   [Zed Attack Proxy](https://code.google.com/p/zaproxy/) which is open
   source and very powerful, yet beginner friendly.
+- If you are missing the 'Login with Google' button and want to test all the challenges out you
+  will want to add your deployed Heroku URL to /app/js/controllers/LoginController.js.
+  Simply update the variable: authorizedRedirectURIs on line 43 to include your URL
+  object, use your URL for both the property name and value.  You can just copy line 44
+  and then paste/modify to include your URL.  Once you have this done you will also need
+  to setup oauth on google's end here: https://console.developers.google.com/apis/library,
+  clicking 'Credentials' and clicking 'Create credentials.'  Once you have setup your credentials,
+  you will want to update the clientId variable in /app/js/controllers/LoginController.js on line 42 to
+  use your new oauth client id from Google.  and re-deploy it to Heroku, once completed
+  you will have the option to login with Google on the login page.  One thing to note, make sure that you setup
+  the redirect_uri to match your app's URL, if you for some reason have to modify the redirect_uri this gets
+  cached on Google's end and takes longer than you'll want to wait to reset.
+
 
 ## Contributing [![GitHub contributors](https://img.shields.io/github/contributors/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/graphs/contributors) [![HuBoard](http://img.shields.io/badge/Hu-Board-blue.svg)](https://huboard.com/bkimminich/juice-shop) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 

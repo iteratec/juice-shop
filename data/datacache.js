@@ -8,4 +8,4 @@ exports.baskets = {}
 exports.basketItems = {}
 exports.complaints = {}
 
-exports.notifications = []
+exports.notifications = {}
