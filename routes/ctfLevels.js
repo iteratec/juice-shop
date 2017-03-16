@@ -3,6 +3,7 @@
 var utils = require('../lib/utils')
 var challenges = require('../data/datacache').challenges
 var Entities = require('html-entities').XmlEntities
+var fs = require('fs')
 
 var entities = null
 var striptags = require('striptags')
@@ -38,7 +39,7 @@ function pushLevel (challenge) {
 }
 
 exports = module.exports = function productReviews () {
-  return function (req, res, next) {
+
     // Load the Basic fbctf im/export template in which the challenges will get inserted
     template = require('../data/fbctfImportTemplate')
     // Load a List of all Countries and sort them into categories based on the size and development
@@ -48,8 +49,5 @@ exports = module.exports = function productReviews () {
       pushLevel(challenges[key])
     }
 
-    // Download the generated File as game.json
-    res.attachment('game.json')
-    res.end(JSON.stringify(template, null, 2), 'utf8')
-  }
+    fs.writeFile('game.json', JSON.stringify(template, null, 2), 'utf8')
 }

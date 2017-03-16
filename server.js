@@ -174,8 +174,6 @@ app.post('/file-upload', upload.single('file'), fileUpload())
 app.get('/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg', easterEgg())
 app.get('/this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us', premiumReward())
 
-app.get('/exports/ctf/levels', ctfLevels())
-
 app.use(angular())
 /* Error Handling */
 app.use(verify.errorHandlingChallenge())
@@ -199,6 +197,9 @@ exports.start = function (config, readyCallback) {
     models.sequelize.drop()
     models.sequelize.sync().success(function () {
       datacreator()
+
+      setTimeout(ctfLevels, 2000)
+
       this.server = server.listen(config.port, function () {
         console.log(colors.yellow('Server listening on port %d'), config.port)
         if (readyCallback) {

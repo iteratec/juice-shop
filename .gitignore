@@ -4,6 +4,7 @@ build/
 .stryker-tmp/
 vagrant/.vagrant/
 juiceshop.sqlite
+game.json
 
 # Intellij
 .idea/
