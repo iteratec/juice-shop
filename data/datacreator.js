@@ -141,8 +141,8 @@ module.exports = function () {
       category: 'Privilege Escalation',
       description: 'Get rid of all 5-star customer feedback.',
       difficulty: 1,
-      country: 'Bermuda',
-      countryCode: 'BM',
+      country: 'Madagascar',
+      countryCode: 'MG',
       solved: false
     }).success(function (challenge) {
       challenges.feedbackChallenge = challenge
