@@ -205,9 +205,6 @@ exports.start = function (config, readyCallback) {
 
       setTimeout(ctfLevels, 2000)
 
-      console.log("config:")
-      console.log(config)
-
       var port = process.env.PORT || config.get('server.port')
 
       this.server = server.listen(port, function () {
