@@ -143,6 +143,13 @@
         {{notification.message}}<br>
         <i class="fa fa-external-link"></i> {{notification.country}}<br>
         <i class="fa fa-flag-checkered"></i> {{notification.flag}}
+        <button class="btn btn-primary"
+                ngclipboard data-clipboard-text="{{notification.flag}}"
+                ngclipboard-success="notification.copyText = 'Copied!'"
+        >
+            <i class="fa fa-clipboard" aria-hidden="true"></i>
+            {{ notification.copyText }}
+        </button>
     </div>
 </div>
 
