@@ -11,6 +11,6 @@ exports = module.exports = function repeatNotification () {
           utils.notify(challenge)
         }
 
-        res.send(200)
+        res.sendStatus(200)
     }
 }
