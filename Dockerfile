@@ -8,5 +8,7 @@ WORKDIR /juice-shop
 
 RUN npm install --production --unsafe-perm
 
+ENV NODE_ENV iteratec
+
 EXPOSE  3000 1337
 CMD ["npm", "start"]
