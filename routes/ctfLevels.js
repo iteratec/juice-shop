@@ -39,15 +39,14 @@ function pushLevel (challenge) {
 }
 
 exports = module.exports = function productReviews () {
-
     // Load the Basic fbctf im/export template in which the challenges will get inserted
-    template = require('../data/fbctfImportTemplate')
+  template = require('../data/fbctfImportTemplate')
     // Load a List of all Countries and sort them into categories based on the size and development
-    entities = new Entities()
+  entities = new Entities()
 
-    for (var key in challenges) {
-      pushLevel(challenges[key])
-    }
+  for (var key in challenges) {
+    pushLevel(challenges[key])
+  }
 
-    fs.writeFile('game.json', JSON.stringify(template, null, 2), 'utf8')
+  fs.writeFile('game.json', JSON.stringify(template, null, 2), 'utf8')
 }

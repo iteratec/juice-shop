@@ -3,10 +3,11 @@ server:
 application:
   domain: localhost:3000
   name: "Smoothie Shop"
-  logoReplacementUrl: ~
-  faviconReplacementUrl: ~
+  logoReplacementUrl: https://raw.githubusercontent.com/iteratec/juice-shop/fbctf/app/public/images/iteratec_logo.png
+  faviconReplacementUrl: https://www.iteratec.de/typo3conf/ext/iteratectheme/Resources/Public/Icons/favicon.ico
   numberOfRandomFakeUsers: 0
   showChallengeSolvedNotifications: true
+  showCtfFlagsInNotifications: true
   theme: "slate"
   twitterUrl: "https://twitter.com/iteratec"
   facebookUrl: "https://www.facebook.com/iteratecGmbH/"

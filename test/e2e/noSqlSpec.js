@@ -11,7 +11,7 @@ describe('/#/search', function () {
   beforeAll(function (done) {
     mongoose.Promise = global.Promise
 
-    mongoose.connect('mongodb://localhost:27017/test')
+    mongoose.connect('mongodb://localhost:1337/test')
     var db = mongoose.connection
     db.once('open', function () {
       new Secret({ message: 'All your base are belong to us!' }).save().then(done, function () {

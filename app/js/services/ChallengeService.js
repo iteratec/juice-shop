@@ -21,14 +21,6 @@ angular.module('juiceShop').factory('ChallengeService', ['$http', '$q', function
     })
   }
 
-  function repeatNotification (challengeName) {
-      return $http.get('/rest/repeat-notification', {
-          params: {
-            challenge: challengeName
-          }
-      })
-  }
-
   function continueCode () {
     var continueCode = $q.defer()
     $http.get('/rest/continue-code').success(function (data) {
