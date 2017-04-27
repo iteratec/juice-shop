@@ -15,7 +15,7 @@
     <meta name="description" content="An intentionally insecure Javascript Web Application">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-    <link ng-controller="NavbarController" href="bower_components/bootswatch/{{applicationTheme}}/bootstrap.min.css" rel="stylesheet" id="theme">
+    <link ng-controller="NavbarController" href="bower_components/bootswatch/slate/bootstrap.min.css" rel="stylesheet" id="theme">
     <!-- Font Awesome -->
     <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Flag Icons -->
@@ -94,6 +94,7 @@
                     <li><a ng-click="changeLanguage('ja')"><span class="flag-icon flag-icon-jp"></span> 日本の</a></li>
                     <li><a ng-click="changeLanguage('lt')"><span class="flag-icon flag-icon-lt"></span> Lietuviešu <i class="fa fa-flask"></i></a></li>
                     <li><a ng-click="changeLanguage('lv')"><span class="flag-icon flag-icon-lv"></span> Latvijas <i class="fa fa-flask"></i></a></li>
+                    <li><a ng-click="changeLanguage('my')"><span class="flag-icon flag-icon-mm"></span> ျမန္မာ</a></li>
                     <li><a ng-click="changeLanguage('nl')"><span class="flag-icon flag-icon-nl"></span> Nederlands</a></li>
                     <li><a ng-click="changeLanguage('no')"><span class="flag-icon flag-icon-no"></span> Norsk</a></li>
                     <li><a ng-click="changeLanguage('pl')"><span class="flag-icon flag-icon-pl"></span> Język Polski</a></li>
@@ -141,15 +142,18 @@
 <div class="container" ng-controller="ChallengeSolvedNotificationController">
     <div uib-alert ng-repeat="notification in notifications" ng-class="'alert alert-success'" close="closeNotification($index)">
         {{notification.message}}<br>
-        <i class="fa fa-external-link"></i> {{notification.country}}<br>
-        <i class="fa fa-flag-checkered"></i> {{notification.flag}}
-        <button class="btn btn-primary"
-                ngclipboard data-clipboard-text="{{notification.flag}}"
-                ngclipboard-success="notification.copyText = 'Copied!'"
-        >
-            <i class="fa fa-clipboard" aria-hidden="true"></i>
-            {{ notification.copyText }}
-        </button>
+
+        <div ng-show="showCtfFlagsInNotifications">
+            <i class="fa fa-external-link"></i> {{notification.country}}<br>
+            <i class="fa fa-flag-checkered"></i> {{notification.flag}}
+            <button class="btn btn-primary btn-xs"
+                    ngclipboard data-clipboard-text="{{notification.flag}}"
+                    ngclipboard-success="notification.copyText = 'Copied!'"
+            >
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                <span translate="{{ notification.copyText ? 'COPY_SUCCESS' : 'COPY_TO_CLIPBOARD'}}"></span>
+            </button>
+        </div>
     </div>
 </div>
 

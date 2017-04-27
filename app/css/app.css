@@ -36,6 +36,14 @@
   text-transform: capitalize;
 }
 
+.notification-repeat-button{
+    cursor: pointer;
+}
+
 .notification-button{
+    cursor: pointer;
+}
+
+.notification-repeat-button{
     cursor: pointer;
 }

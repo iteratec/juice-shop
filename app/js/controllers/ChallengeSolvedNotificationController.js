@@ -2,7 +2,8 @@ angular.module('juiceShop').controller('ChallengeSolvedNotificationController', 
   '$scope',
   '$translate',
   'socket',
-  function ($scope, $translate, socket) {
+  'ConfigurationService',
+  function ($scope, $translate, socket, configurationService) {
     'use strict'
 
     $scope.notifications = []
@@ -18,18 +19,27 @@ angular.module('juiceShop').controller('ChallengeSolvedNotificationController', 
             message: challengeSolved,
             flag: data.flag,
             country: data.country,
-            copyText: 'Copy to Clipboard'
+            copied: false
           })
         }, function (translationId) {
-          $scope.notifications.push(
-            {
-              message: translationId,
-              flag: data.flag,
-              country: data.country,
-              copyText: 'Copy to Clipboard'
-            })
+          $scope.notifications.push({
+            message: translationId,
+            flag: data.flag,
+            country: data.country,
+            copied: false
+          })
         })
         socket.emit('notification received', data.flag)
       }
+    })
+
+    configurationService.getApplicationConfiguration().then(function (data) {
+      if (data && data.application && data.application.showCtfFlagsInNotifications !== null) {
+        $scope.showCtfFlagsInNotifications = data.application.showCtfFlagsInNotifications
+      } else {
+        $scope.showCtfFlagsInNotifications = false
+      }
+    }, function (err) {
+      console.log(err)
     })
   } ])

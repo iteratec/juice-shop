@@ -37,8 +37,7 @@ angular.module('juiceShop').controller('ProductDetailsController', [
     },
     function (err) {
       console.log(err)
-    }
-    )
+    })
 
     $scope.addComment = function () {
       var review = { message: $scope.message, author: $scope.author }

@@ -7,8 +7,8 @@ exports = module.exports = function repeatNotification () {
         var challengeName = decodeURIComponent(req.query.challenge)
         var challenge = utils.findChallenge(challengeName)
 
-        if (challenge) {
-          utils.notify(challenge)
+        if (challenge && challenge.solved) {
+            utils.notify(challenge)
         }
 
         res.sendStatus(200)
