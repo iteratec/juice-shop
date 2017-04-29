@@ -47,7 +47,7 @@
     "jsonwebtoken": "~7.3",
     "jssha": "~2.2",
     "mongodb": "^2.2.22",
-    "mongodb-prebuilt": "^4.6.0",
+    "mongodb-prebuilt": "~6.3.0",
     "mongoose": "^4.8.1",
     "mongoose-auto-increment": "^5.0.1",
     "morgan": "~1.8",
