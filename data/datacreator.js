@@ -437,41 +437,41 @@ module.exports = function () {
       challenges.premiumPaywallChallenge = challenge
     })
 
-    models.Challenge.create({
-      name: 'NoSql Command Injection',
-      category: 'NoSQL Injections',
-      description: 'Let the server sleep for some time. It has done more then enough for you.',
-      difficulty: 2,
-      country: 'Moldova',
-      countryCode: 'MD',
-      solved: false
-    }).success(function (challenge) {
-      challenges.noSqlCommandChallenge = challenge
-    })
-
-    models.Challenge.create({
-      name: 'NoSql Injection',
-      category: 'NoSQL Injections',
-      description: 'Change more than one comment for a product at a time.',
-      difficulty: 2,
-      country: 'Czech Republic',
-      countryCode: 'CZ',
-      solved: false
-    }).success(function (challenge) {
-      challenges.noSqlInjectionChallenge = challenge
-    })
-
-    models.Challenge.create({
-      name: 'NoSql Direct Access',
-      category: 'NoSQL Injections',
-      description: 'Write any Message in the Secrets Collection of the MongoDB',
-      difficulty: 4,
-      country: 'Georgia',
-      countryCode: 'GE',
-      solved: false
-    }).success(function (challenge) {
-      challenges.noSqlDirectAccess = challenge
-    })
+    // models.Challenge.create({
+    //   name: 'NoSql Command Injection',
+    //   category: 'NoSQL Injections',
+    //   description: 'Let the server sleep for some time. It has done more then enough for you.',
+    //   difficulty: 2,
+    //   country: 'Moldova',
+    //   countryCode: 'MD',
+    //   solved: false
+    // }).success(function (challenge) {
+    //   challenges.noSqlCommandChallenge = challenge
+    // })
+    //
+    // models.Challenge.create({
+    //   name: 'NoSql Injection',
+    //   category: 'NoSQL Injections',
+    //   description: 'Change more than one comment for a product at a time.',
+    //   difficulty: 2,
+    //   country: 'Czech Republic',
+    //   countryCode: 'CZ',
+    //   solved: false
+    // }).success(function (challenge) {
+    //   challenges.noSqlInjectionChallenge = challenge
+    // })
+    //
+    // models.Challenge.create({
+    //   name: 'NoSql Direct Access',
+    //   category: 'NoSQL Injections',
+    //   description: 'Write any Message in the Secrets Collection of the MongoDB',
+    //   difficulty: 4,
+    //   country: 'Georgia',
+    //   countryCode: 'GE',
+    //   solved: false
+    // }).success(function (challenge) {
+    //   challenges.noSqlDirectAccess = challenge
+    // })
   }
 
   function createUsers () {
