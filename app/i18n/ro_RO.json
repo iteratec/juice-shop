@@ -89,6 +89,7 @@
   "LABEL_STATUS": "Stare",
   "STATUS_UNSOLVED": "nerezolvat",
   "STATUS_SOLVED": "rezolvat",
+  "STATUS_UNAVAILABLE": "unavailable",
   "CALL_FOR_CONTRIBUTIONS": "Am o idee pentru o nouă provocare? Ai găsit o vulnerabilitate care nu este urmărită aici? Anunţaţi-ne prin intermediul chat-ul comunităţii {{gitter}} sau deschizând un issue pe {{github}}!",
   "CHALLENGE_SOLVED": "Ai rezolvat cu succes o provocare: {{challenge}}",
   "INVALID_CONTINUE_CODE": "Cod pentru continuare invalid.",
@@ -143,5 +144,6 @@
   "ICO_FAQ_ANSWER": "Of course you can! We would never lie to you!",
   "TITLE_TRACK_ORDERS": "Track Orders",
   "LABEL_ORDER_ID": "Order ID",
-  "BTN_TRACK": "Track"
+  "BTN_TRACK": "Track",
+  "LAST_LOGIN_IP": "Last Login IP"
 }

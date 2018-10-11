@@ -89,6 +89,7 @@
   "LABEL_STATUS": "סטטוס",
   "STATUS_UNSOLVED": "לא נפתר",
   "STATUS_SOLVED": "נפתר",
+  "STATUS_UNAVAILABLE": "unavailable",
   "CALL_FOR_CONTRIBUTIONS": "יש לך רעיון לאתגר חדש? מצאת חשיפה שלא נמצאת ברשימה? אפשר ליידע אותנו באמצעות צ'אט הקהילה {{gitter}} או על-ידי פתיחת באג ב{{github}}!",
   "CHALLENGE_SOLVED": "פתרת בהצלחה אתגר: {{challenge}}",
   "INVALID_CONTINUE_CODE": "קוד המשך לא תקין.",
@@ -143,5 +144,6 @@
   "ICO_FAQ_ANSWER": "Of course you can! We would never lie to you!",
   "TITLE_TRACK_ORDERS": "Track Orders",
   "LABEL_ORDER_ID": "Order ID",
-  "BTN_TRACK": "Track"
+  "BTN_TRACK": "Track",
+  "LAST_LOGIN_IP": "Last Login IP"
 }

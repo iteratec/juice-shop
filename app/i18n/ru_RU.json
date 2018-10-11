@@ -89,6 +89,7 @@
   "LABEL_STATUS": "Статус",
   "STATUS_UNSOLVED": "нерешено",
   "STATUS_SOLVED": "решено",
+  "STATUS_UNAVAILABLE": "unavailable",
   "CALL_FOR_CONTRIBUTIONS": "Есть идея для нового задания? Нашёл уязвимость, которая здесь не отслеживается? Дай нам знать через {{gitter}} чат или открой новую проблему на {{github}}!",
   "CHALLENGE_SOLVED": "Ты успешно решил задачу: {{challenge}}",
   "INVALID_CONTINUE_CODE": "Неправильный код.",
@@ -143,5 +144,6 @@
   "ICO_FAQ_ANSWER": "Of course you can! We would never lie to you!",
   "TITLE_TRACK_ORDERS": "Track Orders",
   "LABEL_ORDER_ID": "Order ID",
-  "BTN_TRACK": "Track"
+  "BTN_TRACK": "Track",
+  "LAST_LOGIN_IP": "Last Login IP"
 }

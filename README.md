@@ -1,4 +1,4 @@
-# ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juice-shop/master/app/public/images/JuiceShop_Logo_100px.png) OWASP Juice Shop [![OWASP Labs](https://img.shields.io/badge/owasp-lab%20project-f7b73c.svg)](https://www.owasp.org/index.php/OWASP_Project_Inventory#tab=Labs_Projects) [![GitHub release](https://img.shields.io/github/release/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/releases/latest) [![Twitter Follow](https://img.shields.io/twitter/follow/owasp_juiceshop.svg?style=social&label=Follow)](https://twitter.com/owasp_juiceshop)
+# ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juice-shop/master/app/public/images/JuiceShop_Logo_100px.png) OWASP Juice Shop [![OWASP Flagship](https://img.shields.io/badge/owasp-flagship%20project-48A646.svg)](https://www.owasp.org/index.php/OWASP_Project_Inventory#tab=Flagship_Projects) [![GitHub release](https://img.shields.io/github/release/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/releases/latest) [![Twitter Follow](https://img.shields.io/twitter/follow/owasp_juiceshop.svg?style=social&label=Follow)](https://twitter.com/owasp_juiceshop)
 
 [![Build Status](https://travis-ci.org/bkimminich/juice-shop.svg?branch=master)](https://travis-ci.org/bkimminich/juice-shop)
 [![Build status](https://ci.appveyor.com/api/projects/status/903c6mnns4t7p6fa/branch/master?svg=true)](https://ci.appveyor.com/project/bkimminich/juice-shop/branch/master)
@@ -91,15 +91,6 @@ overview please visit the official project page:
 3. Click on the _Open_ icon next to _Web Preview_ to browse to OWASP
    Juice Shop
 
-#### Deploy to Docker Cloud (:microscope:)
-
-1. Click the button below and follow the instructions
-
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
-
-> This (:microscope:) is an experimental deployment option! Your
-> feedback is appreciated at <https://gitter.im/bkimminich/juice-shop>.
-
 ### Vagrant
 
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html) and
@@ -109,6 +100,14 @@ overview please visit the official project page:
    of the repository)
 3. Run `cd vagrant && vagrant up`
 4. Browse to [192.168.33.10](http://192.168.33.10)
+
+> There is a very convenient Vagrant box available at
+> <https://app.vagrantup.com/commjoen/boxes/trainingbox> (:microscope:)
+> from [@commjoen](https://github.com/commjoen) which comes with latest
+> Docker containers of the OWASP Juice Shop,
+> [OWASP WebGoat](https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project)
+> and other vulnerable web applications as well as pentesting tools like
+> [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
 
 ### Amazon EC2 Instance
 
@@ -162,10 +161,11 @@ OWASP Juice Shop officially supports the following versions of
 official [node.js LTS schedule](https://github.com/nodejs/LTS). Docker
 images and packaged distributions are offered accordingly:
 
-| node.js | [Docker image](https://registry.hub.docker.com/u/bkimminich/juice-shop)             | [Packaged distributions](https://github.com/bkimminich/juice-shop/releases/latest)       |
-|:--------|:------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
-| __9.x__ | __`latest`__ (current official release), `snapshot` (preview from `develop` branch) | `juice-shop-<version>_node9_windows_x64.zip`, `juice-shop-<version>_node9_linux_x64.tgz` |
-| 8.x     |                                                                                     | `juice-shop-<version>_node8_windows_x64.zip`, `juice-shop-<version>_node8_linux_x64.tgz` |
+| node.js             | [Docker image](https://registry.hub.docker.com/u/bkimminich/juice-shop) | [Packaged distributions](https://github.com/bkimminich/juice-shop/releases/latest)         |
+|:--------------------|:------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
+| 10.x (:microscope:) | `snapshot` (preview from `develop` branch)                              | `juice-shop-<version>_node10_windows_x64.zip`, `juice-shop-<version>_node10_linux_x64.tgz` |
+| __9.x__             | __`latest`__ (current official release)                                 | `juice-shop-<version>_node9_windows_x64.zip`, `juice-shop-<version>_node9_linux_x64.tgz`   |
+| 8.x                 |                                                                         | `juice-shop-<version>_node8_windows_x64.zip`, `juice-shop-<version>_node8_linux_x64.tgz`   |
 
 ## Demo [![Heroku](https://heroku-badge.herokuapp.com/?app=juice-shop)](http://demo.owasp-juice.shop)
 
@@ -246,7 +246,7 @@ If you need help with the application setup please check the
 or question in the
 [official Gitter Chat](https://gitter.im/bkimminich/juice-shop).
 
-## Contributing [![GitHub contributors](https://img.shields.io/github/contributors/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/graphs/contributors) [![Stories in Ready](https://badge.waffle.io/bkimminich/juice-shop.svg?label=ready&title=Ready)](http://waffle.io/bkimminich/juice-shop) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/owasp-juice-shop/localized.svg)](https://crowdin.com/project/owasp-juice-shop) [![Bountysource Activity](https://img.shields.io/bountysource/team/juice-shop/activity.svg)](https://www.bountysource.com/teams/juice-shop)
+## Contributing [![GitHub contributors](https://img.shields.io/github/contributors/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/graphs/contributors) [![Waffle.io - Columns and their card count](https://badge.waffle.io/bkimminich/juice-shop.svg?columns=all)](https://waffle.io/bkimminich/juice-shop) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/owasp-juice-shop/localized.svg)](https://crowdin.com/project/owasp-juice-shop) [![Bountysource Activity](https://img.shields.io/bountysource/team/juice-shop/activity.svg)](https://www.bountysource.com/teams/juice-shop)
 
 We are always happy to get new contributors on board! Please check the
 following table for possible ways to do so:
@@ -332,4 +332,4 @@ This program is free software: you can redistribute it and/or modify it
 under the terms of the [MIT license](LICENSE). OWASP Juice Shop and any
 contributions are Copyright © by Bjoern Kimminich 2014-2018.
 
-![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juice-shop/develop/app/public/images/JuiceShop_Logo_400px.png)
+![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juice-shop/master/app/public/images/JuiceShop_Logo_400px.png)

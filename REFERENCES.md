@@ -10,7 +10,7 @@ where this project was mentioned or used!
 > get stuck. :godmode: indicates resources that _spoiler entire
 > challenge solutions_ so you might not want to view them before
 > tackling these challenges yourself! :mega: marks short friendly shout
-> outs.
+> outs. Finally, the :dollar: bill marks commercial resources.
 
 ## Awards :trophy:
 
@@ -20,7 +20,12 @@ where this project was mentioned or used!
 
 ## Web Links
 
-* Blog post on [Null Byte :: WonderHowTo](https://null-byte.wonderhowto.com): [Beginner's Guide to OWASP Juice Shop, Your Practice Hacking Grounds for the 10 Most Common Web App Vulnerabilities](https://null-byte.wonderhowto.com/how-to/beginners-guide-owasp-juice-shop-your-practice-hacking-grounds-for-10-most-common-web-app-vulnerabilities-0185103/) :godmode:
+* Blog post on [Security Boulevard](https://securityboulevard.com):
+  [From Dev to InfoSec Part 1 – The Journey Begins](https://securityboulevard.com/2018/08/from-dev-to-infosec-part-1-the-journey-begins/)
+* Blog post on
+  [Null Byte :: WonderHowTo](https://null-byte.wonderhowto.com):
+  [Beginner's Guide to OWASP Juice Shop, Your Practice Hacking Grounds for the 10 Most Common Web App Vulnerabilities](https://null-byte.wonderhowto.com/how-to/beginners-guide-owasp-juice-shop-your-practice-hacking-grounds-for-10-most-common-web-app-vulnerabilities-0185103/)
+  :godmode:
 * Blog posts on
   [DevelopSec - Developing Better Security](https://www.developsec.com/):
   * [Installing OWASP JuiceShop with Docker](https://www.developsec.com/2018/05/10/installing-owasp-juiceshop-with-docker/)
@@ -109,6 +114,8 @@ where this project was mentioned or used!
 
 ## Lectures and Trainings
 
+* [Finding Website Vulnerabilities with Burp](https://www.packtpub.com/mapt/video/networking_and_servers/9781788399678/81304/81308/finding-website-vulnerabilities-with-burp) chapter :godmode: of the [Mastering Kali Linux Network Scanning](https://www.packtpub.com/networking-and-servers/mastering-kali-linux-network-scanning-video) video course by Brian Johnson :dollar:
+* [University lecture on "IT Security"](https://github.com/bkimminich/it-security-lecture) as Open Educational Resources material by Björn Kimminich
 * [Descargar aqui el taller OWASP Top 10 Hands On basado en OWASP Top 10 y Juice Shop](https://drive.google.com/drive/folders/0B6zv033D1iK9eTJId2RhZkJFTlk?usp=sharing)
   (:es:) by Mateo Martinez, Gerardo Canedo and Maxiimiliano Alonzo,
   [OWASP Uruguay Chapter](https://www.owasp.org/index.php/Uruguay)
@@ -119,8 +126,34 @@ where this project was mentioned or used!
 
 ## Conference and Meetup Appearances
 
+#### Upcoming
+
+* [Workshop: OWASP Juice Shop](https://owasp.github.io/german-owasp-day/archive/2018/)
+  by Björn Kimminich,
+  [German OWASP Day 2018](https://owasp.github.io/german-owasp-day/archive/2018/),
+  19.11.2018
+* [The traditional/inevitable OWASP Juice Shop update](https://owasp.github.io/german-owasp-day/archive/2018/)
+  by Björn Kimminich,
+  [German OWASP Day 2018](https://owasp.github.io/german-owasp-day/archive/2018/),
+  20.11.2018
+* [Juice Shop: OWASP's most broken Flagship](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018#tab=Conference_Day) by Björn Kimminich,
+  [OWASP BeNeLux Days 2018](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018),
+  30.11.2018
+
 #### 2018
 
+* [Playing with OWASP Juice Shop](https://mozilla.or.id/en/space/events/258-playing-with-owasp-juice-shop.html)
+  by Mohammad Febri R, [Mozilla Indonesia](https://mozilla.or.id/),
+  05.08.2018
+  ([Slides](https://slides.com/mohammadfebri/owasp-juice-shop))
+* [OWASP Juice Shop どうでしょう](https://speakerdeck.com/ninoseki/owasp-juice-shop-doudesiyou)
+  by Manabu Niseki,
+  [OWASP Night 2018/7](https://owasp.doorkeeper.jp/events/77466),
+  30.07.2018
+* [Usable Security Tooling - Creating Accessible Security Testing with ZAP](https://www.meetup.com/de-DE/Bay-Area-OWASP/events/252283865/)
+  by David Scrobonia,
+  [OWASP Meetup - SF July 2018](https://www.meetup.com/de-DE/Bay-Area-OWASP/),
+  26.07.2018 ([Youtube](https://www.youtube.com/watch?v=ztfgip-UhWw))
 * [Building an AppSec Program with a Budget of $0: Beyond the OWASP Top 10](https://appseceurope2018a.sched.com/event/EgXt/building-an-appsec-program-with-a-budget-of-0-beyond-the-owasp-top-10)
   by Chris Romeo, [OWASP AppSec Europe 2018](https://2018.appsec.eu),
   06.07.2018 :mega:

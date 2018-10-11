@@ -89,6 +89,7 @@
   "LABEL_STATUS": "Olek",
   "STATUS_UNSOLVED": "lahendamata",
   "STATUS_SOLVED": "lahendatud",
+  "STATUS_UNAVAILABLE": "unavailable",
   "CALL_FOR_CONTRIBUTIONS": "Sul on uue väljakutse idee? Leidsid turvavea, mida tulemuste tabelis ei ole? Anna meile teada {{gitter}}'i vestluse kaudu või loo uus {{github}}'i veateade!",
   "CHALLENGE_SOLVED": "Sa lahendasid edukalt väljakutse: {{challenge}}",
   "INVALID_CONTINUE_CODE": "Vigane jätkamis koos.",
@@ -143,5 +144,6 @@
   "ICO_FAQ_ANSWER": "Loomulikult saad! Me ei valetaks sulle iial!",
   "TITLE_TRACK_ORDERS": "Jälgi tellimusi",
   "LABEL_ORDER_ID": "Tellimuse nr",
-  "BTN_TRACK": "Jälgi"
+  "BTN_TRACK": "Jälgi",
+  "LAST_LOGIN_IP": "Last Login IP"
 }

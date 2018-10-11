@@ -89,6 +89,7 @@
   "LABEL_STATUS": "Status",
   "STATUS_UNSOLVED": "uløste",
   "STATUS_SOLVED": "løst",
+  "STATUS_UNAVAILABLE": "unavailable",
   "CALL_FOR_CONTRIBUTIONS": "Har du en idé for en ny utfordring? Funnet et sikkerhetsproblem som ikke vises her? Gi oss beskjed via {{gitter}} chat eller ved å åpne en {{github}} sak!",
   "CHALLENGE_SOLVED": "Du har løst en utfordring: {{challenge}}",
   "INVALID_CONTINUE_CODE": "Ugyldig fortsettelseskode.",
@@ -143,5 +144,6 @@
   "ICO_FAQ_ANSWER": "Of course you can! We would never lie to you!",
   "TITLE_TRACK_ORDERS": "Track Orders",
   "LABEL_ORDER_ID": "Order ID",
-  "BTN_TRACK": "Track"
+  "BTN_TRACK": "Track",
+  "LAST_LOGIN_IP": "Last Login IP"
 }
