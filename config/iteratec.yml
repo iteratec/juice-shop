@@ -1,16 +1,15 @@
 application:
-  name: "Smoothie Shop"
-  logo: "JuiceShopCTF_Logo.png"
-  favicon: "favicon_ctf.ico"
+  name: 'Smoothie Shop'
+  logo: 'JuiceShopCTF_Logo.png'
+  favicon: 'favicon_ctf.ico'
   gitHubRibbon: none
   showChallengeHints: false
   showVersionNumber: false
-  twitterUrl: "https://twitter.com/iteratec"
-  facebookUrl: "https://www.facebook.com/iteratecGmbH/"
+  twitterUrl: 'https://twitter.com/iteratec'
+  facebookUrl: 'https://www.facebook.com/iteratecGmbH/'
 ctf:
   showFlagsInNotifications: true
   showCountryDetailsInNotifications: both
-  showVersionNumber: false
   countryMapping:
     scoreBoardChallenge:
       name: Canada
@@ -131,7 +130,7 @@ ctf:
       code: AO
     loginSupportChallenge:
       name: Croatia
-      code: CR
+      code: HR
     loginRapperChallenge:
       name: Albania
       code: AL
@@ -195,11 +194,17 @@ ctf:
     securityPolicyChallenge:
       name: Spain
       code: ES
+    hiddenImageChallenge:
+      name: Lithuania
+      code: LT
+    supplyChainAttackChallenge:
+      name: Togo
+      code: TG
 products:
-  - name: "Apple Juice (1000ml)"
+  - name: 'Apple Juice (1000ml)'
     price: 1.99
-    description: "The all-time classic."
-    image: "apple_juice.jpg"
+    description: 'The all-time classic.'
+    image: 'apple_juice.jpg'
     reviews:
       - text: 'One of my favorites!'
         author: 'admin' # Options: admin, jim, bender, ciso, support
